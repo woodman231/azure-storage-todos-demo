@@ -1,0 +1,21 @@
+@model List<AzureStorageTodos.Models.TodoEntityModel>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Completed</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var todo in Model) 
+        {
+            if(todo is not null) 
+            {
+                @Html.DisplayFor(m => todo, "ListOfTodosListItem")
+            }            
+        }
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+@model AzureStorageTodos.Web.Models.TodosHomePageViewModel
+
+@{
+    ViewData["Title"] = "Todos";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<a class="btn btn-primary mb-4" asp-action="Create" asp-controller="Todos">Create</a>
+<p class="text-info mb-4">* If you recently made changes to a Todo, the effects may not be immediate while the Azure Function Rebuilds the List. Refresh the page a few times after making changes.</p>
+
+@Html.DisplayForModel()
