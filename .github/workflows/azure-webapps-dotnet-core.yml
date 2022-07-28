@@ -62,7 +62,7 @@ jobs:
         run: dotnet publish $GITHUB_WORKSPACE/AzureStorageTodos.Web/AzureStorageTodos.Web.csproj /property:GenerateFullPaths=true -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Build function
-        run: dotnet build $GITHUB_WORKSPACE/AzureStorageTodos.AzureFunctions/AzureStroageTodos_AzureFunctions.csproj /property:GenerateFullPaths=true --configuration Release --output ${{env.DOTNET_ROOT}}/myfunctions      
+        run: dotnet build $GITHUB_WORKSPACE/AzureStorageTodos.AzureFunctions/AzureStorageTodos_AzureFunctions.csproj /property:GenerateFullPaths=true --configuration Release --output ${{env.DOTNET_ROOT}}/myfunctions      
 
       - name: Upload web app artifact for deployment job
         uses: actions/upload-artifact@v3
